@@ -1,12 +1,23 @@
 <template>
   <div id="object-detection">
-    <b-card header="Step1 画像選択">
-        <label class="file-upload">
-            ラベリングする画像を選択
-            <input type="file" @change="onFileChange"/>
-        </label>
-    </b-card>
-    <canvas ref="canvas"></canvas>
+    <b-alert :show="model == null">モデルファイルをダウンロードしています。</b-alert>
+     <b-container fluid>
+      <b-row>
+        <b-col>
+            <b-card header="画像選択">
+                <label class="file-upload">
+                    ラベリングする画像を選択
+                    <input type="file" @change="onFileChange"/>
+                </label>
+            </b-card>
+        </b-col>
+        <b-col>
+            <b-card header="表示">
+                <canvas ref="canvas"></canvas>
+            </b-card>
+        </b-col>
+      </b-row>
+     </b-container>
   </div>
 </template>
 
@@ -24,7 +35,7 @@ export default {
             canvas: null,
         }
     },
-    mounted: async function(){
+    mounted: function(){
         this.canvas = this.$refs.canvas
         this.ctx = this.canvas.getContext('2d')
         this.img.src = 'test.jpg'
@@ -82,7 +93,7 @@ export default {
             const x = box[0]
             const y = box[1]
             this.ctx.beginPath()
-            this.ctx.rect(x -5, y-15, 140, 15)
+            this.ctx.rect(x, y+15, 140, -15)
             this.ctx.fillStyle = "rgb(50, 240, 60)"
             this.ctx.fill()
             this.ctx.closePath()
@@ -90,7 +101,7 @@ export default {
             this.ctx.beginPath()
             this.ctx.font = "18px 'ＭＳ Ｐゴシック'"
             this.ctx.fillStyle = "black"
-            this.ctx.fillText(text, parseInt(x, 10), parseInt(y, 10))
+            this.ctx.fillText(text, parseInt(x, 10), parseInt(y+15, 10))
             this.ctx.closePath()
         }
     }
