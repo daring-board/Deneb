@@ -1,27 +1,34 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand>物体検出</b-navbar-brand>
+    <b-navbar toggleable="lg" type="dark" variant="dark">
+      <b-navbar-brand>AppZoo</b-navbar-brand>
       <b-navbar-nav>
-        <b-nav-item @click="imgPage">静止画</b-nav-item>
-        <b-nav-item  @click="movPage">動画</b-nav-item>
+        <b-nav-item>
+          <b-button variant="outline-primary">
+            <router-link to="/pic-obj-det">物体検知：静止画</router-link>
+          </b-button>
+        </b-nav-item>
+        <b-nav-item>
+          <b-button variant="outline-primary">
+            <router-link to="/mov-obj-det">物体検知：動画</router-link>
+          </b-button>
+        </b-nav-item>
+        <b-nav-item>
+          <b-button variant="outline-primary">
+            <router-link to="/posenet">姿勢推定</router-link>
+          </b-button>
+        </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <ObjectDetection v-if="img_page"/>
-    <Movie v-if="mov_page"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ObjectDetection from './components/ObjectDetection.vue'
-import Movie from './components/ObjectDetection_movie.vue'
+
 
 export default {
   name: 'app',
-  components: {
-    ObjectDetection,
-    Movie
-  },
   data: function(){
     return {
       img_page: true,

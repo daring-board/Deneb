@@ -1,12 +1,12 @@
 <template>
-  <div id="movie">
+  <div id="mov-obj-det">
     <b-alert :show="model == null">モデルファイルをダウンロードしています。</b-alert>
     <b-container fluid>
         <b-row>
             <b-col>
                 <b-card header="動画選択">
                     <label class="file-upload">
-                        ラベリングする画像を選択
+                        物体検出する動画を選択してください
                         <input type="file" @change="onFileChange"/>
                     </label>
                 </b-card>
@@ -39,7 +39,7 @@
 import * as cocoSsd from '@tensorflow-models/coco-ssd'
 
 export default {
-    name: 'ObjectDetection',
+    name: 'MovObjDet',
     data: function(){
         return {
             play: false,
