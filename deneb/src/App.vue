@@ -29,22 +29,6 @@
 
 export default {
   name: 'app',
-  data: function(){
-    return {
-      img_page: true,
-      mov_page: false,
-    }
-  },
-  methods: {
-    imgPage(){
-      this.img_page = true
-      this.mov_page = false
-    },
-    movPage(){
-      this.img_page = false
-      this.mov_page = true
-    }
-  }
 }
 </script>
 

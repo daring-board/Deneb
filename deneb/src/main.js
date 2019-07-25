@@ -14,6 +14,7 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 const routes = [
+  { path: '/', component: PicObjDet },
   { path: '/pic-obj-det', component: PicObjDet },
   { path: '/mov-obj-det', component: MovObjDet },
   { path: '/posenet', component: PoseNet },
