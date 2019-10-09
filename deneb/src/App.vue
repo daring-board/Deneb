@@ -20,7 +20,7 @@
         </b-nav-item>
         <b-nav-item>
           <b-button variant="outline-primary">
-            <router-link to="/chat">人工無能チャット</router-link>
+            <router-link to="/deneb">人工無能チャット</router-link>
           </b-button>
         </b-nav-item>
       </b-navbar-nav>
