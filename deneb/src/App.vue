@@ -18,6 +18,11 @@
             <router-link to="/posenet">姿勢推定</router-link>
           </b-button>
         </b-nav-item>
+        <b-nav-item>
+          <b-button variant="outline-primary">
+            <router-link to="/chat">人工無能チャット</router-link>
+          </b-button>
+        </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <router-view></router-view>
