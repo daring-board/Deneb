@@ -20,7 +20,7 @@ export default {
     data: function(){
         return {
             text: '',
-            host: 'http://ec2-18-182-15-116.ap-northeast-1.compute.amazonaws.com:8080/talk',
+            host: 'https://m2vajnoqb5.execute-api.ap-northeast-1.amazonaws.com/dev/talk',
             r_text: '',
         }
     },
