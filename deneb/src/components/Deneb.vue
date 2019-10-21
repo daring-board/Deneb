@@ -6,7 +6,7 @@
                 {{r_text}}
             </b-card-text>
             <b-card-body>
-                <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
+                <b-form-input v-model="text" placeholder="Enter words"></b-form-input>
                 <b-button pill variant="primary" @click="request">送信</b-button>
             </b-card-body>
         </b-card>
