@@ -8,6 +8,7 @@ import PicObjDet from './components/PicObjDet.vue'
 import MovObjDet from './components/MovObjDet.vue'
 import PoseNet from './components/PoseNet.vue'
 import Deneb from './components/Deneb.vue'
+import CodeSearch from './components/CodeSearch.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -23,6 +24,7 @@ const routes = [
   { path: '/mov-obj-det', component: MovObjDet },
   { path: '/posenet', component: PoseNet },
   { path: '/deneb', component: Deneb },
+  { path: '/code_search', component: CodeSearch },
 ]
 
 const router = new VueRouter({
