@@ -2,35 +2,29 @@
   <div id="app">
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand>AppZoo</b-navbar-brand>
-      <b-navbar-nav>
-        <b-nav-item>
-          <b-button variant="outline-primary">
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item>
             <router-link to="/pic-obj-det">物体検知：静止画</router-link>
-          </b-button>
-        </b-nav-item>
-        <b-nav-item>
-          <b-button variant="outline-primary">
+          </b-nav-item>
+          <b-nav-item>
             <router-link to="/mov-obj-det">物体検知：動画</router-link>
-          </b-button>
-        </b-nav-item>
-        <b-nav-item>
-          <b-button variant="outline-primary">
+          </b-nav-item>
+          <b-nav-item>
             <router-link to="/posenet">姿勢推定</router-link>
-          </b-button>
-        </b-nav-item>
-        <b-nav-item>
-          <b-button variant="outline-primary">
+          </b-nav-item>
+          <b-nav-item>
             <router-link to="/deneb">人工無能チャット</router-link>
-          </b-button>
-        </b-nav-item>
-        <b-nav-item>
-          <b-button variant="outline-primary">
-            <router-link to="/code_search">CodeSearch</router-link>
-          </b-button>
-        </b-nav-item>
-      </b-navbar-nav>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link to="/code_search">CodeSearch(工事中)</router-link>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
     </b-navbar>
-    <router-view></router-view>
+
+      <router-view></router-view>
   </div>
 </template>
 

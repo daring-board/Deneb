@@ -3,15 +3,22 @@
     <b-container fluid>
         <b-card header="CodeSearch">
             <b-card-text style="white-space: pre-line; text-align: left;">
-                <div>{{r_text}}</div>
-                <div v-if='urls != null'>
-                    <div v-for="(url, key) in urls" :key="key">
-                        {{key}}. <a :href=url>{{url}}</a> 
+                <div v-if="memory != null">
+                    <div v-if="memory.code != null">
+                        <div v-for="(value, key) in objects" :key=key>
+                            {{value['text']}}
+                            <b-card header='Example'>
+                                <div v-html="value['code']"></div>
+                            </b-card>
+                        </div>
                     </div>
+                </div>
+                <div v-else>
+                    <div>{{r_text}}</div>
                 </div>
             </b-card-text>
             <b-card-body>
-                <b-form-input v-model="text" placeholder="Enter search words: ex. pythonの使い方"></b-form-input>
+                <b-form-input v-model="text" placeholder="Enter search words: ex. サポートベクターマシンの使い方"></b-form-input>
                 <b-button pill variant="primary" @click="request">送信</b-button>
             </b-card-body>
         </b-card>
@@ -20,6 +27,8 @@
 </template>
 
 <script>
+import hljs from 'highlightjs'
+
 export default {
     name: 'code_search',
     data: function(){
@@ -28,7 +37,7 @@ export default {
             host: 'https://m2vajnoqb5.execute-api.ap-northeast-1.amazonaws.com/dev/search',
             r_text: '',
             memory: null,
-            urls: null,
+            objects: [],
         }
     },
     methods: {
@@ -54,11 +63,19 @@ export default {
                     console.log(response.data.memory)
                     if(response.data.memory == null){
                         console.log('aaaa')
-                        vm.urls = null
+                        vm.memory = null
+                        vm.objects = []
                     }else{
                         console.log('bbb')
                         vm.memory = response.data.memory
-                        vm.urls = response.data.memory.urls
+                        if(vm.memory.code != null){
+                            for(var i = 0; i < vm.memory.code.length; i++){
+                                vm.objects[i] =  {
+                                    'code': hljs.highlightAuto(vm.memory.code[i], ['python']).value,
+                                    'text': vm.memory.text[i],
+                                }
+                            }
+                        }
                     }
                 })
         }
@@ -66,5 +83,5 @@ export default {
 }
 </script>
 
-<style>
+<style src='highlightjs/styles/github-gist.css'>
 </style>
