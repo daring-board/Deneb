@@ -12,6 +12,9 @@
                             </b-card>
                         </div>
                     </div>
+                    <div v-else>
+                        <div>{{r_text}}</div>
+                    </div>
                 </div>
                 <div v-else>
                     <div>{{r_text}}</div>

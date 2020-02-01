@@ -9,6 +9,8 @@ import MovObjDet from './components/MovObjDet.vue'
 import PoseNet from './components/PoseNet.vue'
 import Deneb from './components/Deneb.vue'
 import CodeSearch from './components/CodeSearch.vue'
+import Home from './components/Home.vue'
+import Attendance from './components/Attendance.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -19,12 +21,13 @@ Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 
 const routes = [
-  { path: '/', component: PicObjDet },
+  { path: '/', component: Home },
   { path: '/pic-obj-det', component: PicObjDet },
   { path: '/mov-obj-det', component: MovObjDet },
   { path: '/posenet', component: PoseNet },
   { path: '/deneb', component: Deneb },
   { path: '/code_search', component: CodeSearch },
+  { path: '/attendance', component: Attendance}
 ]
 
 const router = new VueRouter({
