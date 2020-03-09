@@ -17,12 +17,15 @@
           <b-nav-item>
             <router-link to="/deneb">人工無能チャット</router-link>
           </b-nav-item>
+          <b-nav-item @click="toDenebChat">
+            <a>雑談チャット</a>
+          </b-nav-item>
           <b-nav-item>
             <router-link to="/code_search">CodeSearch(工事中)</router-link>
           </b-nav-item>
-          <b-nav-item>
+          <!-- <b-nav-item>
             <router-link to="/attendance">バイト勤怠</router-link>
-          </b-nav-item>
+          </b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -36,6 +39,11 @@
 
 export default {
   name: 'app',
+  methods: {
+    toDenebChat: function(){
+      window.location = "https://deneb-chat.firebaseapp.com/"
+    }
+  }
 }
 </script>
 
