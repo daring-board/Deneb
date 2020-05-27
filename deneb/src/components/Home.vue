@@ -45,12 +45,34 @@
             雑談チャット
           </b-card-header>
           <b-card-body>
+            停止中
           </b-card-body>
+        </b-card>
       </b-col>
       <b-col>
         <b-card @click="$router.push('/code_search')">
           <b-card-header>
-              CodeSearch(工事中)
+              CodeSearch
+          </b-card-header>
+          <b-card-body>
+            工事中
+          </b-card-body>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card @click="toAutoML">
+          <b-card-header>
+            AutoML
+          </b-card-header>
+          <b-card-body>
+            工事中
+          </b-card-body>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card @click="$router.push('/ml1')">
+          <b-card-header>
+            賢くなるAI
           </b-card-header>
           <b-card-body>
           </b-card-body>
@@ -73,6 +95,9 @@ export default {
     methods: {
       toDenebChat: function(){
         window.location = "https://deneb-chat.firebaseapp.com/"
+      },
+      toAutoML: function(){
+        window.location = "http://hosting-test.tasdg.s3-website.us-east-2.amazonaws.com/#/login"
       }
     }
 }

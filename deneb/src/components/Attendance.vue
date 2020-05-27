@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style>
-.btn-secondary, .card{
+/* .btn-secondary, .card{
   margin-top:20px;
-}
+} */
 </style>

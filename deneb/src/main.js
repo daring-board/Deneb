@@ -11,6 +11,7 @@ import Deneb from './components/Deneb.vue'
 import CodeSearch from './components/CodeSearch.vue'
 import Home from './components/Home.vue'
 import Attendance from './components/Attendance.vue'
+import ML1 from './components/ML1.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -27,7 +28,8 @@ const routes = [
   { path: '/posenet', component: PoseNet },
   { path: '/deneb', component: Deneb },
   { path: '/code_search', component: CodeSearch },
-  { path: '/attendance', component: Attendance}
+  { path: '/attendance', component: Attendance},
+  { path: '/ml1', component: ML1},
 ]
 
 const router = new VueRouter({

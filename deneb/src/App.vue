@@ -21,7 +21,13 @@
             <a>雑談チャット</a>
           </b-nav-item>
           <b-nav-item>
-            <router-link to="/code_search">CodeSearch(工事中)</router-link>
+            <router-link to="/code_search">CodeSearch</router-link>
+          </b-nav-item>
+         <b-nav-item @click="toAutoML">
+            <a>AutoML</a>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link to="/ml1">賢くなるAI</router-link>
           </b-nav-item>
           <!-- <b-nav-item>
             <router-link to="/attendance">バイト勤怠</router-link>
@@ -42,6 +48,9 @@ export default {
   methods: {
     toDenebChat: function(){
       window.location = "https://deneb-chat.firebaseapp.com/"
+    },
+    toAutoML: function(){
+      window.location = "http://hosting-test.tasdg.s3-website.us-east-2.amazonaws.com/#/login"
     }
   }
 }
