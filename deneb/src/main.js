@@ -2,6 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import VueRouter from 'vue-router'
 import axios from 'axios'
+import './registerServiceWorker'
 
 import App from './App.vue'
 import PicObjDet from './components/PicObjDet.vue'

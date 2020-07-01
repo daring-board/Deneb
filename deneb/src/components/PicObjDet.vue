@@ -108,4 +108,7 @@ export default {
 </script>
 
 <style>
+canvas {
+    max-width: 100%;
+}
 </style>
