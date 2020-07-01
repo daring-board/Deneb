@@ -23,11 +23,14 @@
           <b-nav-item>
             <router-link to="/code_search">CodeSearch</router-link>
           </b-nav-item>
-         <b-nav-item @click="toAutoML">
+          <b-nav-item @click="toAutoML">
             <a>AutoML</a>
           </b-nav-item>
           <b-nav-item>
             <router-link to="/ml1">賢くなるAI</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link to="/webvr">WebVR Test</router-link>
           </b-nav-item>
           <!-- <b-nav-item>
             <router-link to="/attendance">バイト勤怠</router-link>

@@ -59,6 +59,8 @@
           </b-card-body>
         </b-card>
       </b-col>
+    </b-row>
+    <b-row>
       <b-col>
         <b-card @click="toAutoML">
           <b-card-header>
@@ -73,6 +75,15 @@
         <b-card @click="$router.push('/ml1')">
           <b-card-header>
             賢くなるAI
+          </b-card-header>
+          <b-card-body>
+          </b-card-body>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card @click="$router.push('/webvr')">
+          <b-card-header>
+            WebVR Test
           </b-card-header>
           <b-card-body>
           </b-card-body>
