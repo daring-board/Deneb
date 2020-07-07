@@ -90,6 +90,17 @@
         </b-card>
       </b-col>
     </b-row>
+    <b-row>
+      <b-col>
+        <b-card @click="$router.push('webvr_and_ml')">
+          <b-card-header>
+            WebVRxML
+          </b-card-header>
+          <b-card-body>
+          </b-card-body>
+        </b-card>
+      </b-col>
+    </b-row>
       <!-- <b-card @click="$router.push('/attendance')">
         <b-card-header>
             バイト勤怠

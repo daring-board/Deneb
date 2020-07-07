@@ -32,6 +32,9 @@
           <b-nav-item>
             <router-link to="/webvr">WebVR Test</router-link>
           </b-nav-item>
+          <b-nav-item>
+            <router-link to="/webvr_and_ml">WebVRxML</router-link>
+          </b-nav-item>
           <!-- <b-nav-item>
             <router-link to="/attendance">バイト勤怠</router-link>
           </b-nav-item> -->
