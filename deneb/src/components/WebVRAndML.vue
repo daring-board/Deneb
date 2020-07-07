@@ -33,7 +33,6 @@
 
 <script>
 import * as posenet from '@tensorflow-models/posenet'
-import * as tf from '@tensorflow/tfjs'
 
 export default {
   name: 'WebVRAndML',
@@ -66,7 +65,7 @@ export default {
       var el = evt.srcElement;  // <a-box>
       el.setAttribute('color', 'blue');
     },
-    processing: function(params) {
+    processing: function() {
       this.main();
     },
     main: async function main(){
@@ -104,9 +103,9 @@ export default {
           }
 
           if (nose.score > 0.8) {
-              var camera = document.getElementById('myCamera');
-              var rotate = camera.getAttribute('rotation');
-              console.log(rotate);
+              //var camera = document.getElementById('myCamera');
+              //var rotate = camera.getAttribute('rotation');
+              //console.log(rotate);
               const ctr_x = -0.75;
               const ctr_y = 1.6;
               var x = 2 * (nose.position.x / this.size.w + ctr_x);
@@ -114,8 +113,8 @@ export default {
 
               noseObj.setAttribute('visible', true);
               noseObj.setAttribute('position', `${x} ${y} -2`);
-              var pos = noseObj.getAttribute('position');
-              console.log(pos);
+              //var pos = noseObj.getAttribute('position');
+              //console.log(pos);
           } else {
               noseObj.setAttribute('visible', false);
           }

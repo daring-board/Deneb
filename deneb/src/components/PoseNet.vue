@@ -150,4 +150,13 @@ export default {
     width: 800px;
     height: 500px;
 }
+
+.row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card {
+  background-color: gray;
+  color: whitesmoke;
+}
 </style>

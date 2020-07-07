@@ -111,4 +111,13 @@ export default {
 canvas {
     max-width: 100%;
 }
+
+.row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card {
+  background-color: gray;
+  color: whitesmoke;
+}
 </style>
