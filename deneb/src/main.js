@@ -16,6 +16,7 @@ import ML1 from './components/ML1.vue'
 import WebVR from './components/WebVR.vue'
 import WebVRAndML from './components/WebVRAndML.vue'
 import Speech2Text from './components/Speech2Text.vue'
+import FaceExpression from './components/FaceExpression.vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -57,6 +58,7 @@ const routes = [
   { path: '/webvr', component: WebVR },
   { path: '/webvr_and_ml', component: WebVRAndML },
   { path: '/speech2text', component: Speech2Text },
+  { path: '/face_expression', component: FaceExpression },
 ]
 
 const router = new VueRouter({

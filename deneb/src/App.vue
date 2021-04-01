@@ -35,11 +35,11 @@
 					<b-nav-item>
 						<router-link to="/webvr_and_ml">WebVRxML</router-link>
 					</b-nav-item>
-					<!-- <b-nav-item>
-            <router-link to="/attendance">バイト勤怠</router-link>
-          </b-nav-item> -->
 					<b-nav-item>
 						<router-link to="/speech2text">文字起こし</router-link>
+					</b-nav-item>
+					<b-nav-item>
+						<router-link to="/face_expression">スマイルメーター</router-link>
 					</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>

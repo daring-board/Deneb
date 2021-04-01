@@ -91,19 +91,22 @@
 				</b-card>
 			</b-col>
 		</b-row>
-		<!-- <b-card @click="$router.push('/attendance')">
-        <b-card-header>
-            バイト勤怠
-        </b-card-header>
-        <b-card-body>
-        </b-card-body>
-      </b-card> -->
 		<b-row>
 			<b-col>
 				<b-card @click="$router.push('/speech2text')">
 					<b-card-header> 文字起こし </b-card-header>
 					<b-card-body>
 						マイクから音声を入力すると音声が文字として表示されます。
+					</b-card-body>
+				</b-card>
+			</b-col>
+		</b-row>
+		<b-row>
+			<b-col>
+				<b-card @click="$router.push('/face_expression')">
+					<b-card-header>スマイルメーター</b-card-header>
+					<b-card-body>
+						Webカメラに写った顔の表情から笑顔を数値化します。
 					</b-card-body>
 				</b-card>
 			</b-col>
