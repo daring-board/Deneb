@@ -30,7 +30,7 @@
     "face-api.js": "^0.22.2",
     "highlightjs": "^9.16.2",
     "kuromoji": "^0.1.2",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "negaposi-analyzer-ja": "^1.0.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
